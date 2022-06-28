@@ -35,7 +35,7 @@ input{
   padding: 10px;
   border-radius: 10px;
   margin-right: 10px;
-  
+  box-shadow: 1px 1px 6px #868686;
 }
 
 select{
@@ -43,6 +43,7 @@ select{
   padding: 10px 20px;
   margin-right: 10px;
   border-radius: 10px;
+  box-shadow: 1px 1px 6px #868686;
 }
 
 button{
@@ -60,3 +61,20 @@ button{
 button:hover{
   background-color: #500e91;
 }
+
+p{
+  font-size: 28px;
+
+  color: #fae56d;
+  text-shadow:1px 2px #792ec4;
+  
+}
+
+.list{
+  text-align: left;
+  list-style: none;
+}
+
+
+
+
