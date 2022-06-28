@@ -3,16 +3,14 @@ import $ from "jquery";
 import "./App.css";
 
 function App() {
+  //firstOperator and secondOperator store the input values
   const [firstOperand, setFirstOperand] = useState("");
   const [secondOperand, setSecondOperand] = useState("");
+
   const [operator, setOperator] = useState("");
   const [result, setResult] = useState("");
 
-  // const handleChange = (e) => {
-  //   setFirstOperand(e.target.value);
-  //   setSecondOperand(e.target.value);
-  // };
-
+  //handleOperand1, handleOperand2 set the value on state everytime the input value changes
   const handleOperand1 = (e) => {
     setFirstOperand(e.target.value);
   };
@@ -20,7 +18,7 @@ function App() {
   const handleOperand2 = (e) => {
     setSecondOperand(e.target.value);
   };
-
+  //chosen operator is set in operator onchange
   const handleOperators = (e) => {
     setOperator(e.target.value);
   };
@@ -40,44 +38,58 @@ function App() {
 
   return (
     <div className="App">
-      <form
-        action="http://localhost:8000/PHP/server.php"
-        method="post"
-        onSubmit={(event) => handleSubmit(event)}
-      >
-        <label htmlFor="firstOperand">First Operand: </label>
-
-        <input
-          type="number"
-          id="firstOperand"
-          name="firstOperand"
-          value={firstOperand}
-          onChange={(event) => handleOperand1(event)}
-        />
-        <br />
-        <select
-          name="operator"
-          id="operator"
-          onChange={(event) => handleOperators(event)}
+      <h1>Emoji Calculator</h1>
+      <div class='form-container'>
+        <form
+          action="http://localhost:8000/PHP/server.php"
+          method="post"
+          onSubmit={(event) => handleSubmit(event)}
         >
-          <option value="plus">&#128125;</option>
-          <option value="minus">&#128128;</option>
-          <option value="multiply">&#128123;</option>
-          <option value="division">&#128561;</option>
-        </select>
-        <br />
-        <label htmlFor="secondOperand">Second Operand: </label>
-        <input
-          type="number"
-          id="secondOperand"
-          name="secondOperand"
-          value={secondOperand}
-          onChange={(event) => handleOperand2(event)}
-        />
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-      <h1>{result}</h1>
+          {/* takes first operand input */}
+          <input
+            type="number"
+            id="firstOperand"
+            name="firstOperand"
+            value={firstOperand}
+            placeholder="Enter the first operand"
+            onChange={(event) => handleOperand1(event)}
+          />
+          <br />
+          {/* operator
+            here
+             alien --> addition
+             skull --> subtraction
+             ghost --> multiplication
+             scream --> division
+
+        */}
+          <select
+            name="operator"
+            id="operator"
+            onChange={(event) => handleOperators(event)}
+          >
+            <option value="plus">&#128125;</option>
+            <option value="minus">&#128128;</option>
+            <option value="multiply">&#128123;</option>
+            <option value="division">&#128561;</option>
+          </select>
+          <br />
+          {/* takes second operand input */}
+
+          <input
+            type="number"
+            id="secondOperand"
+            name="secondOperand"
+            value={secondOperand}
+            placeholder="Enter the second operand"
+            onChange={(event) => handleOperand2(event)}
+          />
+
+          <button type="submit">Calculate</button>
+        </form>
+      </div>
+
+      <p>{result}</p>
     </div>
   );
 }
