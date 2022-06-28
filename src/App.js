@@ -53,17 +53,17 @@ function App() {
           method="post"
           onSubmit={(event) => handleSubmit(event)}
         >
-          {/* takes first operand input */}
-          <input
-            type="number"
-            id="firstOperand"
-            name="firstOperand"
-            value={firstOperand}
-            placeholder="Enter the first operand"
-            onChange={(event) => handleOperand1(event)}
-          />
-          <br />
-          {/* operator
+          <div className="input-container">
+            <input
+              type="number"
+              id="firstOperand"
+              name="firstOperand"
+              value={firstOperand}
+              placeholder="Enter the first operand"
+              onChange={(event) => handleOperand1(event)}
+            />
+            <br />
+            {/* operator
             here
              alien --> addition
              skull --> subtraction
@@ -71,29 +71,32 @@ function App() {
              scream --> division
 
         */}
-          <select
-            name="operator"
-            id="operator"
-            onChange={(event) => handleOperators(event)}
-          >
-            <option value="plus">&#128125;</option>
-            <option value="minus">&#128128;</option>
-            <option value="multiply">&#128123;</option>
-            <option value="division">&#128561;</option>
-          </select>
-          <br />
-          {/* takes second operand input */}
+            <select
+              name="operator"
+              id="operator"
+              onChange={(event) => handleOperators(event)}
+            >
+              <option value="plus">&#128125;</option>
+              <option value="minus">&#128128;</option>
+              <option value="multiply">&#128123;</option>
+              <option value="division">&#128561;</option>
+            </select>
+            <br />
+            {/* takes second operand input */}
 
-          <input
-            type="number"
-            id="secondOperand"
-            name="secondOperand"
-            value={secondOperand}
-            placeholder="Enter the second operand"
-            onChange={(event) => handleOperand2(event)}
-          />
-
-          <button type="submit">Calculate</button>
+            <input
+              type="number"
+              id="secondOperand"
+              name="secondOperand"
+              value={secondOperand}
+              placeholder="Enter the second operand"
+              onChange={(event) => handleOperand2(event)}
+            />
+          </div>
+          {/* takes first operand input */}
+          <div className="button-container">
+            <button type="submit">Calculate</button>
+          </div>
         </form>
       </div>
       {/* show calculation */}
@@ -111,7 +114,7 @@ function App() {
             console.log("clicked");
           }}
         >
-          See Guides
+          Show Guides
         </button>
         {showGuides ? <Guides /> : ""}
       </div>

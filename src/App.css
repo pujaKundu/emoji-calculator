@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #56BBF1;
+  background-image: linear-gradient(to right,#111111,#202020);
   text-align: center;
   font-family: 'Poppins', sans-serif;
   color:#fff;
@@ -13,6 +13,24 @@
   height: 100vh;
   overflow-x: hidden;
 }
+
+h1{
+  color: #1caef1;
+  font-size: 56px;
+  text-shadow:4px 5px #412f53;
+  font-family: 'Rubik Moonrocks', cursive;
+}
+h2{
+  color: #1caef1;
+}
+
+p{
+  font-size: 28px;
+  color: #1caef1;
+  text-shadow:1px 1px #792ec4;
+  margin: 0;
+}
+/* form styles */
 .form-container{
   display: flex;
   flex-direction: column;
@@ -21,31 +39,41 @@ form{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-h1{
-  color: #fdec8d;
-  font-size: 52px;
-  text-shadow:4px 5px #792ec4;
-  font-family: 'Rubik Moonrocks', cursive;
+/* input field styles */
+.input-container{
+  display: flex;
 }
-
 input{
   border: none;
-  padding: 10px;
+  padding: 12px 15px;
   border-radius: 10px;
   margin-right: 10px;
-  box-shadow: 1px 1px 6px #868686;
+  box-shadow: 1px 2px 6px #353535;
+  background-color: #1d1c1c;
+  color:lightgray;
 }
 
 select{
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
+  width: 100px;
   margin-right: 10px;
   border-radius: 10px;
-  box-shadow: 1px 1px 6px #868686;
+  box-shadow: 1px 2px 6px #353535;
+  background-color: #1d1c1c;
 }
 
+input:hover,select:hover{
+  box-shadow: 0px 0px 6px #792ec4;
+}
+.button-container{
+  display: flex;
+}
+
+/* button styles */
 button{
   background-color: #792ec4;
   padding: 10px 15px;
@@ -54,25 +82,24 @@ button{
   border: none;
   color: #EEEEEE;
   font-weight: bold;
-  box-shadow: 1px 1px 7px #363636;
+  box-shadow: 1px 1px 15px #181818;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 button:hover{
   background-color: #500e91;
 }
 
-p{
-  font-size: 28px;
-
-  color: #fae56d;
-  text-shadow:1px 2px #792ec4;
-  
-}
 
 .list{
   text-align: left;
   list-style: none;
+  color: lightgrey;
+}
+
+.list span{
+  color: #792ec4;
 }
 
 

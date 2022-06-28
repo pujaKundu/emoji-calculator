@@ -9,19 +9,19 @@
     //check the operator and perform mathematical operations
     if($operator == 'plus'){
         $result = $firstOperand + $secondOperand;
-        echo("Addition of $firstOperand and $secondOperand is: ");
+        echo("Addition of $firstOperand and $secondOperand is ");
     }
     if($operator == 'minus'){
         $result = $firstOperand - $secondOperand;
-        echo("Subtraction of $firstOperand and $secondOperand is: ");
+        echo("Subtraction of $firstOperand and $secondOperand is ");
     }
     if($operator == 'multiply'){
         $result = $firstOperand * $secondOperand;
-        echo("Multiplication of $firstOperand and $secondOperand is: ");
+        echo("Multiplication of $firstOperand and $secondOperand is ");
     }
     if($operator == 'division'){
         $result = $firstOperand / $secondOperand;
-        echo("Division of $firstOperand and $secondOperand is: ");
+        echo("Division of $firstOperand and $secondOperand is ");
     }
     
     //will show result upto two decimal points

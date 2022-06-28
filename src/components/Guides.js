@@ -2,7 +2,8 @@ import React from 'react';
 
 const Guides = () => {
     return (
-      <div>
+        <div>
+            <h2>Guides to calculate</h2>
         <ul className="list">
           <li>
             {" "}
