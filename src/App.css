@@ -85,6 +85,7 @@ button{
   box-shadow: 1px 1px 15px #181818;
   cursor: pointer;
   margin-top: 20px;
+  width:180px;
 }
 
 button:hover{
